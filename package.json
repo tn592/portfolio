@@ -3,17 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-
-  "homepage": "https://tn592.github.io/portfolio",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
-
   "dependencies": {
     "@radix-ui/react-toast": "^1.2.15",
     "@tailwindcss/vite": "^4.1.17",
@@ -27,7 +22,6 @@
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.17"
   },
-
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/react": "^19.2.5",
