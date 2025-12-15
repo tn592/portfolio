@@ -2,7 +2,14 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Code, Layers, Server, Database, Terminal } from "lucide-react";
+import { Code, Layers, Server, Database, Terminal, FileCode } from "lucide-react";
+import { FaBootstrap, FaGitAlt, FaHtml5, FaNode, FaPython, FaReact } from "react-icons/fa";
+import { TbBrandCpp } from "react-icons/tb";
+import { IoLogoJavascript } from "react-icons/io";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiDjango, SiSqlite, SiXampp } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+import { DiMysql, DiPostgresql } from "react-icons/di";
 
 const skills = [
   // Programming Languages
@@ -10,45 +17,45 @@ const skills = [
     name: "C/C++",
     level: 95,
     category: "programming languages",
-    icon: Terminal,
+    icon: TbBrandCpp,
   },
   {
     name: "Python",
     level: 95,
     category: "programming languages",
-    icon: Terminal,
+    icon: FaPython,
   },
   {
     name: "JavaScript",
     level: 90,
     category: "programming languages",
-    icon: Terminal,
+    icon: IoLogoJavascript,
   },
   // Frontend
-  { name: "HTML/CSS", level: 80, category: "frontend", icon: Layers },
-  { name: "React", level: 95, category: "frontend", icon: Layers },
-  { name: "Tailwind CSS", level: 85, category: "frontend", icon: Layers },
-  { name: "Bootstrap", level: 80, category: "frontend", icon: Layers },
+  { name: "HTML/CSS", level: 80, category: "frontend", icon: FaHtml5 },
+  { name: "React", level: 95, category: "frontend", icon: FaReact },
+  { name: "Tailwind CSS", level: 85, category: "frontend", icon: RiTailwindCssFill },
+  { name: "Bootstrap", level: 80, category: "frontend", icon: FaBootstrap },
   // Backend
-  { name: "Django", level: 90, category: "backend", icon: Server },
-  { name: "Node.js", level: 85, category: "backend", icon: Server },
+  { name: "Django", level: 90, category: "backend", icon: SiDjango },
+  { name: "Node.js", level: 85, category: "backend", icon: FaNode },
   { name: "API Development", level: 90, category: "backend", icon: Server },
   // Database & Tools
   {
     name: "Git/GitHub",
     level: 95,
     category: "database & tools",
-    icon: Database,
+    icon: FaGitAlt,
   },
-  { name: "VS Code", level: 90, category: "database & tools", icon: Database },
-  { name: "Xampp", level: 85, category: "database & tools", icon: Database },
-  { name: "MySQL", level: 95, category: "database & tools", icon: Database },
-  { name: "SQLite", level: 90, category: "database & tools", icon: Database },
+  { name: "VS Code", level: 90, category: "database & tools", icon: VscVscode },
+  { name: "Xampp", level: 85, category: "database & tools", icon: SiXampp },
+  { name: "MySQL", level: 95, category: "database & tools", icon: DiMysql },
+  { name: "SQLite", level: 90, category: "database & tools", icon: SiSqlite },
   {
     name: "PostgreSQL",
     level: 80,
     category: "database & tools",
-    icon: Database,
+    icon: DiPostgresql,
   },
 ];
 

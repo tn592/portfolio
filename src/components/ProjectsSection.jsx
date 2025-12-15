@@ -1,5 +1,5 @@
 import { ExternalLink, Github } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const projects = [
   {
     id: 1,
@@ -49,16 +49,17 @@ export const ProjectsSection = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
-            <div
+            <Link
               key={key}
-              className="group gradient-border bg-card/70 rounded-xl overflow-hidden shadow-lg card-hover"
+              to={`/projects/${project.id}`}
+              className="group gradient-border bg-card/70 rounded-xl overflow-hidden shadow-lg card-hover block"
             >
               <div className="h-52 overflow-hidden">
                 {" "}
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-6 space-y-4">
@@ -85,6 +86,7 @@ export const ProjectsSection = () => {
                     <a
                       href={project.demoUrl}
                       target="_blank"
+                      onClick={(e) => e.stopPropagation()}
                       className="flex items-center text-primary font-medium hover:underline transition-colors duration-300 group"
                     >
                       Demo
@@ -97,6 +99,7 @@ export const ProjectsSection = () => {
                     <a
                       href={project.gitHubUrl}
                       target="_blank"
+                      onClick={(e) => e.stopPropagation()}
                       className="flex items-center text-foreground/70 hover:text-primary transition-colors duration-300 group"
                     >
                       Code
@@ -108,7 +111,7 @@ export const ProjectsSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
